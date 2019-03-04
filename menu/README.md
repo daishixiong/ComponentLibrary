@@ -102,3 +102,5 @@ select | 选中事件 | Function（index, indexPath), 两个参数..|
 ```
  其余选项请 根据实际项目需求， 参照elment-ui文档进行扩展。
 ```
+## 效果图
+<img src='./meun.gif'>
