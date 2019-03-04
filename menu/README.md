@@ -6,7 +6,7 @@
 ```
  安装了element-ui后，直接把相应.vue文件引入项目中， 当组件使用即可。
 ```
-##使用示例
+## 使用示例
  ```html
 <template>
     <el-container class="v-report-index">
@@ -94,11 +94,13 @@ export default {
 </script>
  ```
 ## 选项
-```
 属性 | 描述 |  类型  
 -|-|-
 menuData | 菜单数据 | Array |
 defaultActive | 菜单激活项 | String/Number |
 select | 选中事件 | Function（index, indexPath), 两个参数..|
-其余选项请 根据实际项目需求， 参照elment-ui文档进行扩展。
 ```
+ 其余选项请 根据实际项目需求， 参照elment-ui文档进行扩展。
+```
+## 效果图
+<img src='./meun.gif'>
