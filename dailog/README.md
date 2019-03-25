@@ -59,10 +59,11 @@
     </script>
 ```
 - 3、插件注册、安装 main.js 启动文件
+```javascript
    ...
    import Dailog form './dailog/index';
-   Vue.use(Dailog);
-
+   Vue.use(Dailog);s
+```
 ### 效果图
 <img src='./dailog.gif'>
 
