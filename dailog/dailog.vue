@@ -15,7 +15,7 @@
 <script>
     export default {
         components: {
-            UICoustom: {
+            UiCoustom: {
                 template: '<div> I AM UI-COUSTOM </div>'
             }
         },
@@ -39,7 +39,7 @@
             ok() {
                 console.log('ok');
                 this.$emit('ok', ...arguments);
-                this.dialogVisible = true;
+                this.dialogVisible = false;
             }
 
         }

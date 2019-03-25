@@ -62,10 +62,10 @@
 ```javascript
    ...
    import Dailog form './dailog/index';
-   Vue.use(Dailog);s
+   Vue.use(Dailog);
 ```
 ### 效果图
-<img src='./dailog.gif'>
+<img src='./dialog.gif'>
 
 
 
