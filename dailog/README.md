@@ -1,11 +1,12 @@
-## 这个一个，基于elemnt-ui dailog组件， 封装的一个自定义模版内容弹出框组件， 主要用于Vue项目， 多弹框页面的使用， 能有效果的明确数据的传递逻辑，使得页面逻辑更加清晰， 使用起来更加方便，提高代码的可维护性。
+## dailog组件
+- 这个一个，基于elemnt-ui dailog组件， 封装的一个自定义模版内容弹出框组件， 主要用于Vue项目， 多弹框页面的使用， 能有效果的明确数据的传递逻辑，使得页面逻辑更加清晰， 使用起来更加方便，提高代码的可维护性。
 
 ### 数据流向图解:
 <img src='./data-transfer.png'>
 
 ### dailog 使用方法
 ```javascript
-    this.$dailog(template, prop).$on('ok', data => {
+    this.$dailog(template, dialogProps, extProps).$on('ok', data => {
         // data 为最终确定 提交过来的数据
     });
 ```
