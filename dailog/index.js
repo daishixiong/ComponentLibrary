@@ -1,14 +1,24 @@
 import Dailog from './dailog.vue';
 let D = {
     created(vue) {
-        vue.prototype.$dailog = function(template) {
-            let vm = Object.created(Dailog);
+        /**
+         * @params: template 弹框页面
+         * @params: dialogOption: element-ui dialog组件相关props参数
+         * @params: extOPtion: 弹框props参数
+         * **/
+        vue.prototype.$dailog = function(template, dialogOption, extOption) {
+            let vm = null;
+            let NewDialog = Object.create(Dailog);
             if (template) {
-                Object.assign(vm.components, {
+                Object.assign(NewDialog.components, {
                     UiCoustom: template
                 });
             }
-            vm = new vue(Dailog).$mount();
+            NewDialog.propsData = {
+                dialogOption: dialogOption,
+                extOption: extOption
+            };
+            vm = new vue(NewDialog).$mount();
             vm.dialogVisible = true;
             document.body.appendChild(vm.$el);
             return vm;

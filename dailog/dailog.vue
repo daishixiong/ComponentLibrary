@@ -1,17 +1,4 @@
-<template>
-    <div>
-        <el-dialog
-            title="提示"
-            :visible.sync="dialogVisible"
-            width="30%"
-            :before-close="handleClose">
-            <ui-coustom @close="close" @ok="ok"></ui-coustom>
-        </el-dialog>
-    </div>
-</template>
-<style>
-
-</style>
+<style></style>
 <script>
     export default {
         components: {
@@ -28,10 +15,10 @@
 
         },
         methods() {
-            handleClose(done) {
-                console.log('点击 xx close');
-                done();
-            },
+            // handleClose(done) {
+            //     console.log('点击 xx close');
+            //     done();
+            // },
             close() {
                 console.log('close');
                 this.dialogVisible = false;
@@ -42,6 +29,27 @@
                 this.dialogVisible = false;
             }
 
+        },
+        render(createElement) {
+            let that = this;
+            let dialogOption = {
+                props: Object.assign(this.dialogOption, {
+                    visible: this.dialogVisible,
+                    beforeClose(done) {
+                        that.dialogVisible = false;
+                    }
+                })
+            };
+            let extOption = {
+                props: this.extOption,
+                on: {
+                    close: this.close,
+                    ok: this.ok
+                }
+            };
+            return  <el-dialog {...dialogOption}>
+                       <ui-coustom {...extOption}></ui-coustom>
+                    </el-dialog>
         }
     };
 </script>
